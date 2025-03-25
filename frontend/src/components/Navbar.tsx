@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+import {Logo} from "./Assests/logo.png";
 interface NavbarProps {
   darkMode: boolean
   setDarkMode: (value: boolean) => void
@@ -47,7 +48,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
           {/* Logo and Title - Always visible */}
           <div className="flex items-center space-x-3">
             <img
-              src="./logo.png"
+              src={Logo}
               alt="Bawarchi.AI Logo"
               className="w-16 sm:w-20 object-contain"
             />
