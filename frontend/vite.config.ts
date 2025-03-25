@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/", // Root-relative paths
+  base: "/", // Changed from './' to root-relative
   server: {
     host: "::",
     port: 8080,
@@ -24,15 +24,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    assetsDir: "assets", // Consistent directory name
+    assetsDir: "static", // Explicit assets directory
     rollupOptions: {
       output: {
-        assetFileNames: "assets/[name]-[hash][extname]", // Consistent path
-        chunkFileNames: "assets/[name]-[hash].js", // Matches assetDir
-        entryFileNames: "assets/[name]-[hash].js" // Matches assetDir
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js"
       }
     },
-    // Enable if you need asset manifest
-    // manifest: true
+    // manifest: true // Generates manifest.json for production
   }
 }));

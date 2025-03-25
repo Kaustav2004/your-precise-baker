@@ -47,7 +47,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
           {/* Logo and Title - Always visible */}
           <div className="flex items-center space-x-3">
             <img
-              src='./assets/logo.png'
+              src='https://res.cloudinary.com/dv28lfhwr/image/upload/v1742939096/logo_ylllxp.png'
               alt="Bawarchi.AI Logo"
               className="w-16 sm:w-20 object-contain"
             />
