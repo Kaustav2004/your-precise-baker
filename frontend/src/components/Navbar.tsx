@@ -39,7 +39,8 @@ const handleLogout = async () => {
 const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
   const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+  const userImage = JSON.parse(localStorage.getItem("user") || "{}").picture;
+  console.log(userImage);
   return (
     <header className={`${darkMode ? "bg-gray-800" : "bg-white"} shadow-sm`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -93,7 +94,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
             <DropdownMenu>
               <DropdownMenuTrigger className="outline-none">
                 <img
-                  src={`./assets/${Math.floor(Math.random() * 8) + 1}.png`}
+                  src={ userImage || `./assets/${Math.floor(Math.random() * 8) + 1}.png`}
                   className="h-12 w-12 rounded-full"
                   alt="User"
                 />
@@ -131,7 +132,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
             <div className="flex items-center justify-between py-2">
               <div className="flex items-center space-x-3">
                 <img
-                  src={`./assets/${Math.floor(Math.random() * 8) + 1}.png`}
+                  src={ userImage || `./assets/${Math.floor(Math.random() * 8) + 1}.png`}
                   className="h-10 w-10 rounded-full"
                   alt="User"
                 />

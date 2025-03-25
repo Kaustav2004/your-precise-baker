@@ -153,7 +153,7 @@ const Community = () => {
                   {/* Profile image integrated with banner */}
                   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                     <img
-                      src={user?.image || userData.picture}
+                      src={JSON.parse(localStorage.getItem("user") || "{}").picture || userData.picture}
                       alt={userData.name}
                       crossOrigin="anonymous"
                       className="w-24 h-24 rounded-full border-4 border-white dark:border-gray-800 object-cover shadow-md"
