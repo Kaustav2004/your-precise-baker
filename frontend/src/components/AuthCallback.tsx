@@ -1,52 +1,78 @@
-import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { useAuth } from "../contexts/AuthContext"
+import { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 const AuthCallback = () => {
-  const navigate = useNavigate()
-  const { setUser } = useAuth() // Add setUser to your AuthContext
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { setUser } = useAuth();
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search)
-    const token = urlParams.get("token")
-    const name = urlParams.get("name")
-    const email = urlParams.get("email")
-    const image = urlParams.get("image")
-    const id = urlParams.get("id")
+    const processAuth = () => {
+      try {
+        // Debug: Log the current URL state
+        console.log("Current URL:", window.location.href);
+        console.log("Hash:", location.hash);
+        console.log("Search:", location.search);
 
-    console.log("Received auth callback params:", {
-      token,
-      name,
-      email,
-      image,
-      id,
-    })
+        // Check for auth data in localStorage first
+        const existingToken = localStorage.getItem("token");
+        const existingUser = localStorage.getItem("user");
 
-    if (token && name && email && image && id) {
-      // Save token
-      localStorage.setItem("token", token)
+        if (existingToken && existingUser) {
+          console.log("Using existing auth data");
+          setUser(JSON.parse(existingUser));
+          navigate("/home");
+          return;
+        }
 
-      // Save user data
-      const userData = {
-        name,
-        email,
-        picture: image,
-        id,
+        // Extract auth data from URL
+        let authParams = new URLSearchParams();
+        
+        // Check both hash and query parameters
+        if (location.hash.includes("auth/callback")) {
+          const hashParams = location.hash.split("?")[1] || "";
+          authParams = new URLSearchParams(hashParams);
+        } else if (location.search) {
+          authParams = new URLSearchParams(location.search);
+        } else {
+          throw new Error("No auth parameters found");
+        }
+
+        // Get required values
+        const token = authParams.get("token");
+        const name = authParams.get("name");
+        const email = authParams.get("email");
+        const image = authParams.get("image");
+        const id = authParams.get("id");
+
+        if (!token || !id) {
+          throw new Error("Missing required auth fields");
+        }
+
+        // Store auth data
+        const userData = { name, email, picture: image, id };
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(userData));
+        
+        // Update context and redirect
+        setUser(userData);
+        window.history.replaceState({}, "", "/"); // Clean URL
+        navigate("/home");
+
+      } catch (error) {
+        console.error("Auth processing failed:", error);
+        // Clear any partial auth data
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        navigate("/login?error=auth_failed");
       }
-      localStorage.setItem("user", JSON.stringify(userData))
+    };
 
-      // Update context
-      setUser(userData)
+    processAuth();
+  }, [navigate, setUser, location]);
 
-      // Navigate to home
-      navigate("/home")
-    } else {
-      console.error("Missing required auth parameters")
-      navigate("/")
-    }
-  }, [navigate, setUser])
+  return <div>Completing authentication...</div>;
+};
 
-  return <div>Authenticating...</div>
-}
-
-export default AuthCallback
+export default AuthCallback;

@@ -48,14 +48,23 @@ router.get(
     // Encode the token for URL safety
     const encodedToken = encodeURIComponent(token)
 
+    // res.redirect(
+    //   `${process.env.FRONTEND_URL}/auth/callback?` +
+    //     `token=${encodedToken}&` +
+    //     `name=${encodeURIComponent(user.name)}&` +
+    //     `email=${encodeURIComponent(user.email)}&` +
+    //     `image=${encodeURIComponent(user.picture)}&` +
+    //     `id=${user._id}`
+    // )
+
     res.redirect(
-      `${process.env.FRONTEND_URL}/#/auth/callback?` +
-        `token=${encodedToken}&` +
-        `name=${encodeURIComponent(user.name)}&` +
-        `email=${encodeURIComponent(user.email)}&` +
-        `image=${encodeURIComponent(user.picture)}&` +
-        `id=${user._id}`
-    )
+      `${process.env.FRONTEND_URL}/auth/callback?` +
+      `token=${encodeURIComponent(token)}&` +
+      `id=${user._id}&` +
+      `name=${encodeURIComponent(user.name)}&` +
+      `email=${encodeURIComponent(user.email)}&` +
+      `image=${encodeURIComponent(user.picture)}`
+    );
   }
 )
 
