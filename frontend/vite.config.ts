@@ -23,8 +23,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "build",
-    assetsDir: "assets", // Explicit assets directory
+    outDir: "dist",
+    assetsDir: "static", // Explicit assets directory
     rollupOptions: {
       output: {
         assetFileNames: "assets/[name]-[hash][extname]",
@@ -32,6 +32,6 @@ export default defineConfig(({ mode }) => ({
         entryFileNames: "assets/[name]-[hash].js"
       }
     },
-    manifest: true // Generates manifest.json for production
+    // manifest: true // Generates manifest.json for production
   }
 }));
