@@ -47,11 +47,14 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
         <div className="flex items-center justify-between">
           {/* Logo and Title - Always visible */}
           <div className="flex items-center space-x-3">
+            <a href="/" >
             <img
               src='https://res.cloudinary.com/dv28lfhwr/image/upload/v1742939096/logo_ylllxp.png'
               alt="Bawarchi.AI Logo"
               className="w-16 sm:w-20 object-contain"
             />
+            </a>
+            
             <div>
               <h1 className="text-xl sm:text-2xl font-bold">Bawarchi.AI</h1>
               <p
