@@ -49,7 +49,7 @@ router.get(
     const encodedToken = encodeURIComponent(token)
 
     res.redirect(
-      `${process.env.FRONTEND_URL}/auth/callback?` +
+      `${process.env.FRONTEND_URL}/#/auth/callback?` +
         `token=${encodedToken}&` +
         `name=${encodeURIComponent(user.name)}&` +
         `email=${encodeURIComponent(user.email)}&` +
