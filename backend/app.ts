@@ -15,7 +15,7 @@ dotenv.config()
 connectDB()
 
 app.use(express.json())
-app.use(cors({ origin: "http://localhost:8080", credentials: true }))
+app.use(cors({ origin: ["http://localhost:8080", "https://your-precise-baker-bice.vercel.app"], credentials: true }))
 app.use(cookieParser())
 app.use(
   session({
