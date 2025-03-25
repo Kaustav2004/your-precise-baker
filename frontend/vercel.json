@@ -10,23 +10,17 @@
   }],
   "routes": [
     {
-      "src": "/(auth/)?assets/.*",
-      "status": 404,
-      "headers": { "Cache-Control": "no-cache" }
-    },
-    {
-      "src": "/static/(.*)",
+      "src": "/(.*\\.(js|css|json|ico|png|jpg|jpeg|svg|webp|woff2))$",
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
       }
     },
     {
-      "src": "/auth/callback",
-      "dest": "/"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ]
 }
