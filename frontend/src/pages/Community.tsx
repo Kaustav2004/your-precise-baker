@@ -320,7 +320,7 @@ const Community = () => {
                   <div className="p-4 flex items-center justify-between">
                     <div className="flex items-center">
                       <img
-                        src={user?.image || userData.picture}
+                        src={ JSON.parse(localStorage.getItem("user") || "{}").picture || userData.picture}
                         alt={userData.name}
                         className="w-10 h-10 rounded-full object-cover"
                         crossOrigin="anonymous"
