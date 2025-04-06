@@ -26,14 +26,13 @@ Here're some of the project's best features:
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222726.png" alt="project-screenshot" width="40" height="70/">
+<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222726.png" alt="project-screenshot" width="400" height="700/">
 
-<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222918.png" alt="project-screenshot" width="40" height="70/">
+<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222918.png" alt="project-screenshot" width="400" height="700/">
 
-<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223027.png" alt="project-screenshot" width="40" height="70/">
+<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223027.png" alt="project-screenshot" width="400" height="700/">
 
-<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223308.png" alt="project-screenshot" width="40" height="70/">
-  
+<img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223308.png" alt="project-screenshot" width="400" height="700/">
   
 <h2>💻 Built with</h2>
 
