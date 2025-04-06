@@ -31,9 +31,8 @@ Here're some of the project's best features:
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222918.png" alt="project-screenshot-2" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223027.png" alt="project-screenshot-3" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223308.png" alt="project-screenshot-4" width="200"/>
-  <img src="[Screenshot 2025-04-06 113020.png](https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-04-06%20113020.png)" alt="project-screenshot-4" width="200"/>
+  <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-04-06%20113020.png" alt="project-screenshot-5" width="200"/>
 </p>
-
 
 <h2>💻 Built with</h2>
 
@@ -43,6 +42,55 @@ Technologies used in the project:
 *   React
 *   Javascript
 *   TTS
+## 🛠️ Setup & Installation
+
+Follow the steps below to set up and run Bawarchi-AI locally on your machine:
+
+### 1. Clone the Repository
+
+You can use either **SSH** or **HTTPS**:
+
+**Using SSH:**
+```bash
+git clone git@github.com:your-username/bawarchi-ai.git
+```
+
+**Using HTTPS:**
+```bash
+git clone https://github.com/your-username/bawarchi-ai.git
+```
+
+### 2. Navigate to the Project Directory
+
+Open **two terminals** – one for the frontend and one for the backend:
+
+**Terminal 1: Frontend**
+```bash
+cd bawarchi-ai/frontend
+npm install
+npm run dev
+```
+
+**Terminal 2: Backend**
+```bash
+cd bawarchi-ai/backend
+npm install
+npm run dev
+```
+
+### 3. Visit the Application
+
+Once both servers are running, visit:
+
+```
+http://localhost:3000
+```
+
+to access the Bawarchi-AI interface.
+
+---
+
+> 💡 Make sure Node.js and npm are installed on your system. We recommend using Node.js v18+.
 
 <h2>🛡️ License:</h2>
 
