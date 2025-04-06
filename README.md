@@ -31,9 +31,9 @@ Here're some of the project's best features:
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222918.png" alt="project-screenshot-2" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223027.png" alt="project-screenshot-3" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223308.png" alt="project-screenshot-4" width="200"/>
+  <img src="[Screenshot 2025-04-06 113020.png](https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-04-06%20113020.png)" alt="project-screenshot-4" width="200"/>
 </p>
 
-<h2>💻 Built with</h2>
 
 <h2>💻 Built with</h2>
 
