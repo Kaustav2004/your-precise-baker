@@ -1,8 +1,10 @@
 <h1 align="center" id="title">Bawarchi-AI</h1>
 
-<p id="description">Presenting Bawarchi-AI - The result of sheer dedication and technical implementation from Team Prudence built for the Google Solutions Challenge 2025. Bawarchi- AI aims to be a one-stop solution for all your baking and kitchen needs and also intends to provide a launch-pad to smaller kitchens and bakeries. Levering the best technologies available at our disposal and powered by Google's Gemini API we present an all-in-one model that allows users to calculate precise measurements for their recipe ingredients. That's not all we provide an interactive dashboard to visualize each step with default timers to track each step of the cooking/baking process. 
+<p id="description">Presenting Bawarchi-AI - The result of sheer dedication and technical implementation from Team Prudence built for the Google Solutions Challenge 2025. 
   
-  HAPPY BAKING!</p>
+  Bawarchi-AI aims to be a one-stop solution for all your baking and kitchen needs and also intends to provide a launch-pad to smaller kitchens and bakeries. Levereging the best technologies available at our disposal and powered by Google's Gemini API, we present an all-in-one model that allows users to calculate precise measurements for their recipe ingredients. That's not all we provide an interactive dashboard to visualize each step with default timers to track each step of the cooking/baking process. 
+  
+<h2 align="center" id="title">Happy Baking !!!</h2>
 
 <h2>🚀 Demo</h2>
 
