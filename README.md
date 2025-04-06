@@ -1,5 +1,8 @@
 <h1 align="center" id="title">Bawarchi-AI</h1>
 
+<p align="center"><img src="https://github.com/bitWise72/your-precise-baker/blob/main/Gemini_Generated_Image_fuvd9jfuvd9jfuvd%20(1).jpg" alt="project-image"></p>
+
+
 <p id="description">Presenting Bawarchi-AI - The result of sheer dedication and technical implementation from Team Prudence built for the Google Solutions Challenge 2025. 
   
   Bawarchi-AI aims to be a one-stop solution for all your baking and kitchen needs and also intends to provide a launch-pad to smaller kitchens and bakeries. Levereging the best technologies available at our disposal and powered by Google's Gemini API, we present an all-in-one model that allows users to calculate precise measurements for their recipe ingredients. That's not all we provide an interactive dashboard to visualize each step with default timers to track each step of the cooking/baking process. 
@@ -26,22 +29,30 @@ Here're some of the project's best features:
 
 <h2>📸 Project Screenshots:</h2>
 
+<!-- Featured single screenshot -->
+<p align="center">
+  <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-04-06%20113020.png" alt="project-screenshot-5" width="400"/>
+</p>
+
+<!-- Row of 4 screenshots -->
 <p align="center">
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222726.png" alt="project-screenshot-1" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20222918.png" alt="project-screenshot-2" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223027.png" alt="project-screenshot-3" width="200"/>
   <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-03-23%20223308.png" alt="project-screenshot-4" width="200"/>
-  <img src="https://github.com/bitWise72/your-precise-baker/blob/main/Screenshot%202025-04-06%20113020.png" alt="project-screenshot-5" width="200"/>
 </p>
+
 
 <h2>💻 Built with</h2>
 
 Technologies used in the project:
 
 *   Google GeminiAPI
+*   Google Authentication
 *   React
-*   Javascript
-*   TTS
+*   Typescript
+*   Text-To-Speech
+  
 ## 🛠️ Setup & Installation
 
 Follow the steps below to set up and run Bawarchi-AI locally on your machine:
