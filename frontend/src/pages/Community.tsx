@@ -213,7 +213,7 @@ const Community = () => {
                     </div>
                   </div>
 
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <button
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                         darkMode
@@ -223,7 +223,7 @@ const Community = () => {
                     >
                       Edit Profile
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (

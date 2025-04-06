@@ -105,9 +105,9 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
               <DropdownMenuContent>
                 <DropdownMenuLabel>{name || "User"}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => navigate("/profile")}>
+                {/* <DropdownMenuItem onClick={() => navigate("/profile")}>
                   Profile
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem onClick={handleLogout}>
                   Logout
                 </DropdownMenuItem>
@@ -167,7 +167,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
               Community
             </button>
 
-            <button
+            {/* <button
               className="w-full text-center p-2.5 cursor-pointer font-semibold rounded-lg text-white bg-primary hover:bg-primary-hover transition-colors"
               onClick={() => {
                 navigate("/profile")
@@ -175,7 +175,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
               }}
             >
               Profile
-            </button>
+            </button> */}
 
             <button
               className="w-full text-center p-2.5 cursor-pointer font-semibold rounded-lg text-white bg-primary hover:bg-primary-hover transition-colors"
