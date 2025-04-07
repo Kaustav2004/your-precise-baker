@@ -63,7 +63,7 @@ You can use either **SSH** or **HTTPS**:
 
 **Using HTTPS:**
 ```bash
-git clone https://github.com/Kaustav2004/bawarchi-ai.git](https://github.com/Kaustav2004/your-precise-baker
+git clone https://github.com/Kaustav2004/your-precise-baker
 ```
 
 ### 2. Navigate to the Project Directory
