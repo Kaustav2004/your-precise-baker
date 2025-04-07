@@ -1,39 +1,52 @@
-import express from "express"
-import connectDB from "./config/db"
-import passport from "passport"
-import session from "express-session"
-import cors from "cors"
-import cookieParser from "cookie-parser"
-import authRoutes from "./routes/authRoutes"
+import express from "express";
+import connectDB from "./config/db";
+import passport from "passport";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import cors from "cors";
+import cookieParser from "cookie-parser";
+import authRoutes from "./routes/authRoutes";
+import "./config/passport";
+import dotenv from "dotenv";
 
-import "./config/passport"
+dotenv.config();
 
-const app = express()
-import dotenv from "dotenv"
-dotenv.config()
+const app = express();
 
-connectDB()
+connectDB();
 
-app.use(express.json())
-app.use(cors({ origin: ["http://localhost:8080", "https://your-precise-baker-bice.vercel.app"], credentials: true }))
-app.use(cookieParser())
+app.use(express.json());
+app.use(
+  cors({
+    origin: ["http://localhost:8080", "https://your-precise-baker-bice.vercel.app"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
+
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "your_default_secret", // Use a strong secret
+    secret: process.env.SESSION_SECRET || "your_default_secret",
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }, // Change to true if using HTTPS
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI!,
+      collectionName: "sessions",
+    }),
+    cookie: {
+      secure: process.env.NODE_ENV === "production", // true on Vercel
+      maxAge: 1000 * 60 * 60 * 24, // 1 day
+    },
   })
-)
+);
 
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.use("/auth", authRoutes)
+app.use("/auth", authRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Backend is working")
-})
+  res.send("Backend is working ✅");
+});
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
+export default app;
