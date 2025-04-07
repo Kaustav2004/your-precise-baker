@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, setDarkMode, name, image }: NavbarProps) => {
           <div className="flex items-center space-x-3">
             <a href="/" >
             <img
-              src='https://res.cloudinary.com/dv28lfhwr/image/upload/v1742939096/logo_ylllxp.png'
+              src='https://res.cloudinary.com/dv28lfhwr/image/upload/v1744028284/WhatsApp_Image_2025-03-23_at_3.54.15_PM_ccohh7.jpg'
               alt="Bawarchi.AI Logo"
               className="w-16 sm:w-20 object-contain"
             />
