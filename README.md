@@ -63,12 +63,12 @@ You can use either **SSH** or **HTTPS**:
 
 **Using SSH:**
 ```bash
-git clone git@github.com:your-username/bawarchi-ai.git
+git clone git@github.com:Kaustav2004/bawarchi-ai.git
 ```
 
 **Using HTTPS:**
 ```bash
-git clone https://github.com/your-username/bawarchi-ai.git
+git clone https://github.com/Kaustav2004/bawarchi-ai.git
 ```
 
 ### 2. Navigate to the Project Directory
