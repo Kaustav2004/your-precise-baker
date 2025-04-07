@@ -61,14 +61,9 @@ Follow the steps below to set up and run Bawarchi-AI locally on your machine:
 
 You can use either **SSH** or **HTTPS**:
 
-**Using SSH:**
-```bash
-git clone git@github.com:Kaustav2004/bawarchi-ai.git
-```
-
 **Using HTTPS:**
 ```bash
-git clone https://github.com/Kaustav2004/bawarchi-ai.git
+git clone https://github.com/Kaustav2004/bawarchi-ai.git](https://github.com/Kaustav2004/your-precise-baker
 ```
 
 ### 2. Navigate to the Project Directory
